@@ -3,6 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <!--配置全局变量-->
+    <settings>
+        <!--使用jdbc的getGeneratedKeys 获取数据库自增主键值-->
+        <setting name="useGeneratedKeys" values="true"/>
+        <!--使用列别名替换列名-->
+        <setting name="userColumnLable" values="true"/>
+        <!--开启驼峰命名法：Table(create_time)->Entity(createTime)-->
+        <setting name="mapUnderscoreCamelCase" values="true"/>
+    </settings>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>

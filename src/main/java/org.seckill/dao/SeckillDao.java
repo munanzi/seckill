@@ -1,34 +1,35 @@
 package org.seckill.dao;
 
+import org.seckill.entity.Seckill;
+
+import java.util.Date;
+import java.util.List;
+
 /**
  * Created by Alex on 2016/5/20.
  */
-public class SeckillDao {
-    private String name;
-    private String startTime;
-    private String endTime;
+public interface SeckillDao {
+    /**
+     * 减库存
+     * @param seckillId
+     * @param killTime
+     * @return
+     */
+    int reduceNumber(long seckillId,Date killTime);
 
-    public String getName() {
-        return name;
-    }
+    /**
+     * 根据ID查询秒杀商品
+     * @param seckillId
+     * @return
+     */
+    Seckill queryById(long seckillId);
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    /**
+     * 根据偏移量查询秒杀商品列表
+     * @param offset
+     * @param limit
+     * @return
+     */
+    List<Seckill> queryAll(int offset,int limit);
 
-    public String getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
-    }
-
-    public String getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
-    }
 }
