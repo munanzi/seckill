@@ -6,19 +6,19 @@ import java.util.Date;
  * Created by Alex on 2016/6/5.
  */
 public class Seckill {
-    private long seckillID;
+    private long seckillId;
     private String name;
     private int number;
     private Date startTime;
     private Date endTime;
     private Date createTime;
 
-    public long getSeckillID() {
-        return seckillID;
+    public long getSeckillId() {
+        return seckillId;
     }
 
-    public void setSeckillID(long seckillID) {
-        this.seckillID = seckillID;
+    public void setSeckillId(long seckillId) {
+        this.seckillId = seckillId;
     }
 
     public int getNumber() {
